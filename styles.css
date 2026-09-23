@@ -53,14 +53,18 @@ h1 {
   line-height: 1.1;
 }
 
-nav {
+header nav {
   display: flex;
   flex-wrap: wrap;
   gap: 8px 28px;
   margin-top: 18px;
 }
 
-nav a {
+main a {
+  color: var(--cruz);
+}
+
+header nav a {
   color: #dfe9e4;
   text-decoration: none;
   padding-bottom: 4px;
@@ -68,7 +72,13 @@ nav a {
   transition: border-color 0.2s, color 0.2s;
 }
 
-nav a:hover {
+a:focus-visible {
+  outline: 3px solid var(--zimbro);
+  outline-offset: 3px;
+}
+
+header nav a[aria-current="page"],
+header nav a:hover {
   color: white;
   border-bottom-color: var(--amendoeira);
 }
@@ -103,15 +113,6 @@ h3 {
 p {
   max-width: 70ch;
   margin: 0 0 16px;
-}
-
-main a {
-  color: var(--cruz);
-}
-
-a:focus-visible {
-  outline: 3px solid var(--zimbro);
-  outline-offset: 3px;
 }
 
 /* ---------- Multimédia ---------- */
@@ -197,4 +198,61 @@ footer {
   color: #cfdcd5;
   background-color: var(--xisto);
   border-top: 6px solid var(--cruz);
+}
+
+/* ---------- Página Multimédia ---------- */
+
+nav.ancoras ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav.ancoras li {
+  margin: 0;
+}
+
+.fotografias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.fotografias img {
+  width: 120px;
+  height: 80px;
+  margin: 0;
+  object-fit: cover;
+  border: 2px solid var(--zimbro);
+  border-radius: 4px;
+}
+
+.poema {
+  margin-top: 15px;
+  font-style: italic;
+}
+
+.poema p {
+  margin: 4px 0;
+}
+
+/* Versos ímpares */
+.poema p:nth-child(odd) {
+  color: var(--texto);
+}
+
+/* Versos pares */
+.poema p:nth-child(even) {
+  color: var(--cruz);
+  font-weight: bold;
+}
+
+/* Primeiro verso */
+.poema p:nth-child(1) {
+  font-size: 1.2em;
+  text-transform: uppercase;
 }
