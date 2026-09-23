@@ -4,39 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A minha cidade</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
-    <h1>A minha cidade</h1>
-    <a href="../lab2/multimedia.html">Multimédia</a>
-    <a href="../lab2/informacoes.html">Informações</a>
-    <h2>Localização</h2>
-    <p>
-      Mogadouro é uma vila portuguesa situada na Europa, no nordeste de
-      Portugal, no distrito de Bragança, região Norte. O concelho localiza-se no
-      Planalto Mirandês, no chamado Nordeste Transmontano, fazendo fronteira com
-      Espanha ao longo do rio Douro. O território é delimitado pelos concelhos
-      de Vimioso e Miranda do Douro a norte, Freixo de Espada à Cinta e Torre de
-      Moncorvo a sul, e por Alfândega da Fé e Macedo de Cavaleiros a oeste e
-      este, sendo limitado a este e sudeste por Espanha. Morfologicamente,
-      apresenta no centro uma elevação, a Serra de Mogadouro, e nas suas áreas
-      limítrofes os vales profundos dos rios Angueira, Sabor e Douro. O concelho
-      tem uma área total de cerca de 760,65 km², com uma altitude média de cerca
-      de 700 metros e ponto mais alto na Serra da Castanheira, com 992 metros. A
-      vila situa-se a cerca de 700 km de Lisboa e perto de 200 km do Porto, e o
-      seu clima é mediterrânico com influência continental, caracterizado por
-      invernos frios e verões quentes e secos. Em 2021, o concelho contava com
-      pouco mais de 8 mil habitantes.
-    </p>
+    <header>
+      <h1>A minha cidade</h1>
+      <nav>
+        <a href="index.html" aria-current="page">Início</a>
+        <a href="informacoes.html">Informações</a>
+        <a href="multimedia.html">Multimédia</a>
+      </nav>
+    </header>
 
-    <iframe
-      width="400"
-      height="300"
-      src="https://www.google.com/maps?q=Mogadouro,Portugal&output=embed"
-      allowfullscreen
-      title="Localização"
-    >
-    </iframe>
+    <main>
+      <h2>Localização</h2>
+      <p>
+        Mogadouro é uma vila portuguesa situada na Europa, no nordeste de
+        Portugal, no distrito de Bragança, região Norte. O concelho localiza-se
+        no Planalto Mirandês, no chamado Nordeste Transmontano, fazendo
+        fronteira com Espanha ao longo do rio Douro. O território é delimitado
+        pelos concelhos de Vimioso e Miranda do Douro a norte, Freixo de Espada
+        à Cinta e Torre de Moncorvo a sul, e por Alfândega da Fé e Macedo de
+        Cavaleiros a oeste e este, sendo limitado a este e sudeste por Espanha.
+        Morfologicamente, apresenta no centro uma elevação, a Serra de
+        Mogadouro, e nas suas áreas limítrofes os vales profundos dos rios
+        Angueira, Sabor e Douro. O concelho tem uma área total de cerca de
+        760,65 km², com uma altitude média de cerca de 700 metros e ponto mais
+        alto na Serra da Castanheira, com 992 metros. A vila situa-se a cerca de
+        700 km de Lisboa e perto de 200 km do Porto, e o seu clima é
+        mediterrânico com influência continental, caracterizado por invernos
+        frios e verões quentes e secos. Em 2021, o concelho contava com pouco
+        mais de 8 mil habitantes.
+      </p>
 
-    <footer>DIW 2026</footer>
+      <iframe
+        src="https://www.google.com/maps?q=Mogadouro,Portugal&amp;output=embed"
+        allowfullscreen
+        loading="lazy"
+        title="Mapa da localização de Mogadouro"
+      ></iframe>
+    </main>
+
+    <footer>
+      <p>DIW 2026</p>
+    </footer>
   </body>
 </html>

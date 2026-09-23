@@ -1,3 +1,200 @@
+/* ==========================================================
+   Mogadouro - styles.css
+   Paleta inspirada na região:
+   xisto (rocha local), líquen, zimbro (arbustos das arribas),
+   cruz templária (vermelho) e amendoeira em flor (rosa suave)
+   ========================================================== */
+
+:root {
+  --xisto: #2c3e45;
+  --liquen: #edf1ec;
+  --zimbro: #4d7c73;
+  --cruz: #9b2b2b;
+  --amendoeira: #f6dfe0;
+  --papel: #fbfcfa;
+  --texto: #25323a;
+  --largura: 900px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ---------- Base ---------- */
+
 body {
-  background-color: #b3b3b3;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.7;
+  color: var(--texto);
+  background-color: var(--liquen);
+}
+
+/* ---------- Cabeçalho e navegação ---------- */
+
+header {
+  background-color: var(--xisto);
+  color: white;
+  padding: 36px max(24px, calc((100% - var(--largura)) / 2)) 20px;
+  border-bottom: 6px solid var(--cruz);
+}
+
+h1 {
+  margin: 0;
+  font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 28px;
+  margin-top: 18px;
+}
+
+nav a {
+  color: #dfe9e4;
+  text-decoration: none;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+nav a:hover {
+  color: white;
+  border-bottom-color: var(--amendoeira);
+}
+
+/* ---------- Conteúdo principal ---------- */
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: var(--largura);
+  margin: 0 auto;
+  padding: 40px 24px 56px;
+}
+
+h2 {
+  display: inline-block;
+  margin: 0 0 20px;
+  padding-bottom: 6px;
+  font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  font-size: 2rem;
+  color: var(--xisto);
+  border-bottom: 3px solid var(--cruz);
+}
+
+h3 {
+  margin: 32px 0 12px;
+  font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  font-size: 1.4rem;
+  color: var(--zimbro);
+}
+
+p {
+  max-width: 70ch;
+  margin: 0 0 16px;
+}
+
+main a {
+  color: var(--cruz);
+}
+
+a:focus-visible {
+  outline: 3px solid var(--zimbro);
+  outline-offset: 3px;
+}
+
+/* ---------- Multimédia ---------- */
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+  border: 1px solid #c9d4cd;
+}
+
+iframe {
+  display: block;
+  width: 100%;
+  max-width: 640px;
+  height: 340px;
+  margin: 24px 0;
+  border: 1px solid #c9d4cd;
+}
+
+/* ---------- Tabela ---------- */
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  background-color: var(--papel);
+}
+
+th {
+  padding: 12px 14px;
+  text-align: left;
+  color: white;
+  background-color: var(--xisto);
+  border: 1px solid var(--xisto);
+}
+
+thead tr:first-child th {
+  text-align: center;
+  background-color: var(--zimbro);
+  border-color: var(--zimbro);
+}
+
+td {
+  padding: 12px 14px;
+  color: var(--texto);
+  border: 1px solid #c9d4cd;
+}
+
+tbody tr:nth-child(even) td {
+  background-color: var(--amendoeira);
+}
+
+/* ---------- Curiosidades ---------- */
+
+.curiosidades {
+  margin-top: 40px;
+  padding: 8px 28px 20px;
+  background-color: var(--papel);
+  border-left: 5px solid var(--cruz);
+}
+
+ol {
+  margin: 0;
+  padding-left: 22px;
+}
+
+li {
+  margin-bottom: 12px;
+}
+
+li::marker {
+  color: var(--cruz);
+  font-weight: 700;
+}
+
+/* ---------- Rodapé ---------- */
+
+footer {
+  padding: 22px max(24px, calc((100% - var(--largura)) / 2));
+  color: #cfdcd5;
+  background-color: var(--xisto);
+  border-top: 6px solid var(--cruz);
 }
