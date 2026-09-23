@@ -5,6 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Multimédia — Mogadouro</title>
     <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      /* --- Galeria de fotografias --- */
+      .fotografias {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 15px;
+      }
+
+      .fotografias img {
+        width: 120px;
+        height: 80px;
+        object-fit: cover;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+      }
+
+      /* --- Poema --- */
+      .poema {
+        margin-top: 15px;
+        font-style: italic;
+      }
+
+      .poema p {
+        margin: 4px 0;
+      }
+
+      /* Estiliza versos ímpares */
+      .poema p:nth-child(odd) {
+        color: #555;
+      }
+
+      /* Estiliza versos pares */
+      .poema p:nth-child(even) {
+        color: #2a6f97;
+        font-weight: bold;
+      }
+
+      /* Destaca o primeiro verso */
+      .poema p:nth-child(1) {
+        font-size: 1.2em;
+        text-transform: uppercase;
+      }
+
+      /* Links âncora */
+      nav.ancoras ul {
+        list-style: none;
+        display: flex;
+        gap: 15px;
+        padding: 0;
+      }
+    </style>
   </head>
 
   <body>
@@ -13,16 +66,39 @@
     </header>
 
     <main>
+      <h2>A minha cidade em imagens, vídeo e poesia</h2>
+      <p>
+        Nesta página apresento um pouco mais sobre Mogadouro através de
+        fotografias, vídeo e poesia.
+      </p>
+
+      <nav class="ancoras">
+        <ul>
+          <li><a href="#fotografias">Fotografias</a></li>
+          <li><a href="#video">Vídeo</a></li>
+          <li><a href="#poesia">Poesia</a></li>
+        </ul>
+      </nav>
+
+      <!-- ===================== FOTOGRAFIAS ===================== -->
       <section>
-        <h2>Galeria</h2>
-        <figure>
-          <img src="images/mogadouro-castelo.jpg" alt="Castelo de Mogadouro" />
-          <figcaption>Castelo de Mogadouro</figcaption>
-        </figure>
+        <h3 id="fotografias">Fotografias</h3>
+
+        <div class="fotografias">
+          <img src="images/castelo.jpg" alt="Castelo de Mogadouro" />
+          <img src="images/igreja.jpg" alt="Igreja Matriz de Mogadouro" />
+          <img src="images/rioSabor.jpg" alt="Rio Sabor em Mogadouro" />
+          <img src="images/praca.jpg" alt="Praça central de Mogadouro" />
+          <img src="images/miradouro.jpg" alt="Miradouro sobre Mogadouro" />
+          <img src="images/serra.jpg" alt="Serra de Mogadouro" />
+          <img src="images/ruas.jpg" alt="Ruas antigas de Mogadouro" />
+          <img src="images/pontevelha.jpg" alt="Ponte velha sobre o rio" />
+        </div>
       </section>
 
+      <!-- ===================== VÍDEO ===================== -->
       <section>
-        <h2>Vídeo</h2>
+        <h3 id="video">Vídeo</h3>
         <div class="video-wrapper">
           <iframe
             width="560"
@@ -43,16 +119,20 @@
         </div>
       </section>
 
+      <!-- ===================== POESIA ===================== -->
       <section>
-        <h2>Localização</h2>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.google.com/maps?q=Mogadouro,Portugal&output=embed"
-          allowfullscreen
-          title="Localização de Mogadouro no mapa"
-        >
-        </iframe>
+        <h3 id="poesia">Poesia</h3>
+
+        <div class="poema">
+          <p>Mogadouro, vila de granito e sol,</p>
+          <p>Guardas nas pedras a história a arder,</p>
+          <p>O Sabor corre manso ao teu redor,</p>
+          <p>E a serra vela o teu amanhecer.</p>
+          <p>Nas ruas antigas ecoa o passado,</p>
+          <p>Nordeste bravo, terra de raiz funda,</p>
+          <p>Em cada canto um tempo é guardado,</p>
+          <p>Mogadouro, memória que perdura.</p>
+        </div>
       </section>
     </main>
 
