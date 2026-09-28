@@ -232,7 +232,7 @@ nav.ancoras li {
 .fotografias img {
   width: 300px;
   height: 250px;
-  margin: 2;
+  margin: 0;
   object-fit: cover;
   border: 2px solid var(--zimbro);
   border-radius: 10px;
