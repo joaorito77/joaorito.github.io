@@ -263,3 +263,45 @@ nav.ancoras li {
   font-size: 1.2em;
   text-transform: uppercase;
 }
+
+/* ---------- Responsivo (telemóvel) ---------- */
+
+@media (width <= 600px) {
+  body {
+    padding-bottom: 64px;
+  }
+
+  header nav {
+    position: fixed;
+    inset: auto 0 0;
+    z-index: 10;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0;
+    margin: 0;
+    background-color: var(--xisto);
+    border-top: 4px solid var(--cruz);
+  }
+
+  header nav a {
+    flex: 1;
+    padding: 14px 4px;
+    font-size: 0.85rem;
+    text-align: center;
+    border-bottom: none;
+  }
+
+  header nav a[aria-current="page"] {
+    background-color: var(--cruz);
+  }
+
+  .fotografias img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+}
