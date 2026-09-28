@@ -100,6 +100,11 @@ main {
   padding: 40px 24px 56px;
 }
 
+main.largo {
+  max-width: none;
+  padding: 0;
+}
+
 h2 {
   display: inline-block;
   margin: 0 0 20px;
@@ -207,137 +212,6 @@ footer {
   border-top: 6px solid var(--cruz);
 }
 
-/* ---------- Página Multimédia ---------- */
-
-nav.ancoras ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 24px;
-  margin: 16px 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-nav.ancoras li {
-  margin: 0;
-}
-
-.fotografias {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 15px;
-}
-
-.fotografias img {
-  width: 370px;
-  height: 350px;
-  margin: 0;
-  object-fit: cover;
-  border: 2px solid var(--zimbro);
-  border-radius: 10px;
-  transition: transform 0.4s ease;
-}
-
-.poema {
-  margin-top: 15px;
-  font-style: italic;
-}
-
-.poema p {
-  margin: 4px 0;
-}
-
-/* Versos ímpares */
-.poema p:nth-child(odd) {
-  color: var(--texto);
-}
-
-/* Versos pares */
-.poema p:nth-child(even) {
-  color: var(--cruz);
-  font-weight: bold;
-}
-
-/* Primeiro verso */
-.poema p:nth-child(1) {
-  font-size: 1.2em;
-  text-transform: uppercase;
-}
-
-/* ---------- Página Multimédia: secções com cores ---------- */
-
-main.largo {
-  max-width: none;
-  padding: 0;
-}
-
-.intro {
-  padding: 40px max(24px, calc((100% - var(--largura)) / 2)) 24px;
-}
-
-.secao {
-  padding: 8px max(24px, calc((100% - var(--largura)) / 2)) 40px;
-}
-
-.secao h3 {
-  margin-top: 24px;
-}
-
-.secao-fotos {
-  background-color: var(--liquen);
-}
-
-.secao-video {
-  background-color: var(--amendoeira);
-}
-
-.secao-poesia {
-  background-color: var(--papel);
-}
-
-.video-wrapper iframe {
-  width: 100%;
-  max-width: 640px;
-  height: auto;
-  aspect-ratio: 16 / 9;
-}
-
-/* ---------- Fotografia emblemática ---------- */
-
-.emblema {
-  position: relative;
-  padding: 32px 0;
-  background-color: var(--xisto);
-}
-
-.emblema img {
-  width: 60%;
-  height: auto;
-  margin: 0 0 0 5%;
-  border: none;
-}
-
-.frase {
-  position: absolute;
-  top: 50%;
-  left: 68%;
-  width: 27%;
-  margin: 0;
-  transform: translateY(-50%);
-  font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
-  font-size: 2vw;
-  font-style: italic;
-  line-height: 1.3;
-  color: white;
-}
-
-/* ---------- Transição ---------- */
-
-.fotografias img:hover {
-  transform: scale(1.08);
-}
-
 /* ---------- Página Localização ---------- */
 
 .localizacao {
@@ -411,6 +285,132 @@ main.grelha-pagina {
   margin-top: 0;
 }
 
+/* ---------- Página Multimédia ---------- */
+
+nav.ancoras ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav.ancoras li {
+  margin: 0;
+}
+
+.fotografias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.fotografias img {
+  width: 370px;
+  height: 350px;
+  margin: 0;
+  object-fit: cover;
+  border: 2px solid var(--zimbro);
+  border-radius: 10px;
+  transition: transform 0.4s ease;
+}
+
+.poema {
+  margin-top: 15px;
+  font-style: italic;
+}
+
+.poema p {
+  margin: 4px 0;
+}
+
+/* Versos ímpares */
+.poema p:nth-child(odd) {
+  color: var(--texto);
+}
+
+/* Versos pares */
+.poema p:nth-child(even) {
+  color: var(--cruz);
+  font-weight: bold;
+}
+
+/* Primeiro verso */
+.poema p:nth-child(1) {
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+/* ---------- Página Multimédia: secções com cores ---------- */
+
+.intro {
+  padding: 40px max(24px, calc((100% - var(--largura)) / 2)) 24px;
+}
+
+.secao {
+  padding: 8px max(24px, calc((100% - var(--largura)) / 2)) 40px;
+}
+
+.secao h3 {
+  margin-top: 24px;
+}
+
+.secao-fotos {
+  background-color: var(--liquen);
+}
+
+.secao-video {
+  background-color: var(--amendoeira);
+}
+
+.secao-poesia {
+  background-color: var(--papel);
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+/* ---------- Fotografia emblemática ---------- */
+
+.emblema {
+  position: relative;
+  padding: 32px 0;
+  background-color: var(--xisto);
+}
+
+.emblema img {
+  width: 60%;
+  height: auto;
+  margin: 0 0 0 5%;
+  border: none;
+}
+
+.frase {
+  position: absolute;
+  top: 50%;
+  left: 68%;
+  width: 27%;
+  margin: 0;
+  transform: translateY(-50%);
+  font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  font-size: 2vw;
+  font-style: italic;
+  line-height: 1.3;
+  color: white;
+}
+
+/* ---------- Transição ---------- */
+
+.fotografias img:hover {
+  transform: scale(1.08);
+}
+
 /* ---------- Responsivo (telemóvel) ---------- */
 
 @media (width <= 600px) {
@@ -465,7 +465,7 @@ main.grelha-pagina {
     font-size: 5vw;
   }
 
-    .localizacao {
+  .localizacao {
     flex-direction: column;
   }
 
@@ -475,7 +475,7 @@ main.grelha-pagina {
     height: 300px;
   }
 
-    .grelha {
+  .grelha {
     grid-template-columns: 1fr;
   }
 
