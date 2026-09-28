@@ -1,0 +1,176 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: whitesmoke;
+
+    /* Fundo único para a página toda (hero, main e rodapé) */
+    background-color: #0d1030;
+    background-image: url("../images/main.svg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* HERO */
+
+.hero {
+    height: 600px;
+    position: relative;
+    isolation: isolate;
+    color: whitesmoke;
+}
+
+/* A imagem fica numa camada atrás e desvanece em baixo,
+   para se misturar com o fundo da página sem corte */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background-image: url("../images/hero.svg");
+    background-size: cover;
+    background-position: center;
+
+    -webkit-mask-image: linear-gradient(to bottom, #000 65%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 65%, transparent 100%);
+}
+
+/* MENU */
+
+nav {
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+}
+
+/* TEXTO DO HERO */
+
+.texto-hero {
+    position: absolute;
+    left: 10%;
+    top: 35%;
+    width: 450px;
+}
+
+.texto-hero h1 {
+    font-size: 45px;
+}
+
+.texto-hero p {
+    font-size: 18px;
+}
+
+/* BOTÃO */
+
+.botao {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: blue;
+    color: aliceblue;
+}
+
+/* PROJETOS */
+
+#projetos {
+    padding: 60px;
+}
+
+.projetos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card {
+    padding: 30px;
+    width: 220px;
+
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 12px;
+}
+
+/* DIW */
+
+#diw {
+    padding: 60px 0 0;
+}
+
+.diw-conteudo {
+    display: flex;
+    gap: 40px;
+}
+
+.diw-conteudo div {
+    width: 50%;
+}
+
+.diw-conteudo img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* RODAPÉ */
+
+footer {
+    padding: 40px 20px;
+    text-align: center;
+    color: whitesmoke;
+
+    background-color: rgba(13, 16, 48, 0.55);
+
+    border-top: 4px solid;
+    border-image: linear-gradient(90deg, #e8375f, #f4b63a, #17a9c6) 1;
+}
+
+/* TELEMÓVEL */
+
+@media (max-width: 600px) {
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .texto-hero {
+        left: 5%;
+        width: 90%;
+    }
+
+    .texto-hero h1 {
+        font-size: 32px;
+    }
+
+    #projetos {
+        padding: 30px 20px;
+    }
+
+    .projetos {
+        flex-direction: column;
+    }
+
+    .card {
+        width: auto;
+    }
+
+    .diw-conteudo {
+        flex-direction: column;
+    }
+
+    .diw-conteudo div {
+        width: 100%;
+    }
+
+}
