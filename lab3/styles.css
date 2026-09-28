@@ -2,8 +2,6 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: whitesmoke;
-
-  /* Fundo único para a página toda (hero, main e rodapé) */
   background-color: #0d1030;
   background-image: url("../images/main.svg");
   background-size: cover;
