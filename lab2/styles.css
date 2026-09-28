@@ -264,7 +264,6 @@ nav.ancoras li {
   text-transform: uppercase;
 }
 
-
 /* ---------- Página Multimédia: secções com cores ---------- */
 
 main.largo {
@@ -332,7 +331,6 @@ main.largo {
   color: white;
 }
 
-
 /* ---------- Transição ---------- */
 
 .fotografias img {
@@ -383,7 +381,7 @@ main.largo {
     overflow-x: auto;
   }
 
-   .emblema img {
+  .emblema img {
     width: 100%;
     margin: 0;
   }
