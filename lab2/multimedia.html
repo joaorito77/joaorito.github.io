@@ -12,25 +12,27 @@
       <h1>Multimédia — A minha cidade</h1>
     </header>
 
-    <main>
-      <h2>A minha cidade em imagens, vídeo e poesia</h2>
-      <p>
-        Nesta página apresento um pouco mais sobre Mogadouro através de
-        fotografias, vídeo e poesia.
-      </p>
+    <main class="largo">
+      <section class="intro">
+        <h2>A minha cidade em imagens, vídeo e poesia</h2>
+        <p>
+          Nesta página apresento um pouco mais sobre Mogadouro através de
+          fotografias, vídeo e poesia.
+        </p>
 
-      <nav class="ancoras">
-        <ul>
-          <li><a href="../index.html">Inicio</a></li>
-          <li><a href="#fotografias">Fotografias</a></li>
-          <li><a href="#video">Vídeo</a></li>
-          <li><a href="#poesia">Poesia</a></li>
-        </ul>
-      </nav>
+        <nav class="ancoras">
+          <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="#fotografias">Fotografias</a></li>
+            <li><a href="#video">Vídeo</a></li>
+            <li><a href="#poesia">Poesia</a></li>
+          </ul>
+        </nav>
+      </section>
 
       <!-- ===================== FOTOGRAFIAS ===================== -->
-      <section>
-        <h3 id="fotografias">Fotografias</h3>
+      <section id="fotografias" class="secao secao-fotos">
+        <h3>Fotografias</h3>
 
         <div class="fotografias">
           <img src="../images/castelo.jpg" alt="Castelo de Mogadouro" />
@@ -40,8 +42,8 @@
       </section>
 
       <!-- ===================== VÍDEO ===================== -->
-      <section>
-        <h3 id="video">Vídeo</h3>
+      <section id="video" class="secao secao-video">
+        <h3>Vídeo</h3>
         <div class="video-wrapper">
           <iframe
             width="560"
@@ -63,8 +65,8 @@
       </section>
 
       <!-- ===================== POESIA ===================== -->
-      <section>
-        <h3 id="poesia">Poesia</h3>
+      <section id="poesia" class="secao secao-poesia">
+        <h3>Poesia</h3>
 
         <div class="poema">
           <p>Mogadouro, vila de granito e sol,</p>
@@ -76,6 +78,17 @@
           <p>Em cada canto um tempo é guardado,</p>
           <p>Mogadouro, memória que perdura.</p>
         </div>
+      </section>
+
+      <!-- ============ FOTOGRAFIA EMBLEMÁTICA ============ -->
+      <section class="emblema">
+        <img
+          src="../images/emblematica.jpg"
+          alt="Estátua e igreja matriz de Mogadouro"
+        />
+        <p class="frase">
+          Há terras que se leem como livros, e esta tem o seu escritor à porta.
+        </p>
       </section>
     </main>
 
