@@ -236,6 +236,7 @@ nav.ancoras li {
   object-fit: cover;
   border: 2px solid var(--zimbro);
   border-radius: 10px;
+  transition: transform 0.4s ease;
 }
 
 .poema {
@@ -332,10 +333,6 @@ main.largo {
 }
 
 /* ---------- Transição ---------- */
-
-.fotografias img {
-  transition: transform 0.4s ease;
-}
 
 .fotografias img:hover {
   transform: scale(1.08);
