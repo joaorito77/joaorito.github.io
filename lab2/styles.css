@@ -338,7 +338,6 @@ main.largo {
   transform: scale(1.08);
 }
 
-
 /* ---------- Responsivo (telemóvel) ---------- */
 
 @media (width <= 600px) {
