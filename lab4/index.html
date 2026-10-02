@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <title>Página Artilhada</title>
+  </head>
+
+  <body>
+    <header id="cabecalho-site">Página Artilhada</header>
+
+    <main class="primeiro">
+      <section>
+        <ul>
+          <li class="item-lista">
+            <span class="texto">1.Passa por aqui!!</span>
+          </li>
+          <li class="item-lista">
+            <span class="texto-item">2.Pinta-me!</span>
+            <div class="grupo-botoes">
+              <button type="button" class="red">Red</button>
+              <button type="button" class="green">Green</button>
+              <button type="button" class="blue">Blue</button>
+            </div>
+          </li>
+          <li class="item-lista">
+            <label for="caixa-aleatoria" class="texto-item"
+              >3. Experimenta escrever...</label
+            >
+            <input
+              type="text"
+              id="caixa-aleatoria"
+              class="caixa-escrita"
+              placeholder="Digite qualquer coisa..."
+            />
+          </li>
+          <li class="item-lista">
+            <label for="caixa-submeter" class="texto-item"
+              >4.Escreva uma cor...</label
+            >
+            <div class="input">
+              <input
+                type="text"
+                id="caixa-submeter"
+                class="caixa-escrita"
+                placeholder="Ex: red,blue..."
+              />
+              <button type="button" id="submeter" class="submeter">
+                Submeter
+              </button>
+            </div>
+          </li>
+          <li class="item-lista">
+            <div class="contador">
+              <button type="button" id="conta" class="conta">Conta!</button>
+              <span id="numero" class="numero-exibido">0</span>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>DIW-2026</footer>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

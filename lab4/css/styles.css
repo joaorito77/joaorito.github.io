@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    background-color: aliceblue;
+}
+header {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    background-color: azure;
+    transition: background-color 0.1s ease;
+}
+
+main{
+    display: flex;
+    padding: 30px;
+}
+
+.item-lista {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+
+}
+
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color:azure;
+}
+
