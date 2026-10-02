@@ -1,43 +1,41 @@
-window.onload = function() {
+window.onload = function () {
   console.log("O JS carregou com sucesso a partir da pasta scripts/! 🎉");
 
   const itemLinha1 = document.querySelector("ul li:nth-of-type(1)");
-  const textoLinha1 = itemLinha1.querySelector(".texto");
+  const textoLinha1 = itemLinha1 ? itemLinha1.querySelector(".texto") : null;
   const textoOriginal = "1.Passa por aqui!!";
 
   if (itemLinha1 && textoLinha1) {
-    itemLinha1.addEventListener("mouseover", function() {
+    itemLinha1.addEventListener("mouseover", function () {
       textoLinha1.textContent = "Uau! O rato passou por aqui! 🎉";
       textoLinha1.style.color = "#e67e22";
       textoLinha1.style.fontWeight = "bold";
     });
 
-    itemLinha1.addEventListener("mouseout", function() {
+    itemLinha1.addEventListener("mouseout", function () {
       textoLinha1.textContent = textoOriginal;
       textoLinha1.style.color = "";
       textoLinha1.style.fontWeight = "";
     });
   }
 
-  const textoPintame = document.querySelector(
-    "ul li:nth-of-type(2) .texto-item"
-  );
+  const textoPintame = document.querySelector("ul li:nth-of-type(2) .texto-item");
   const btnRed = document.querySelector(".red");
   const btnGreen = document.querySelector(".green");
   const btnBlue = document.querySelector(".blue");
 
   if (textoPintame && btnRed && btnGreen && btnBlue) {
-    btnRed.addEventListener("click", function() {
+    btnRed.addEventListener("click", function () {
       textoPintame.style.color = "red";
       textoPintame.textContent = "2.Pinta-me! (Vermelho)";
     });
 
-    btnGreen.addEventListener("click", function() {
+    btnGreen.addEventListener("click", function () {
       textoPintame.style.color = "green";
       textoPintame.textContent = "2.Pinta-me! (Verde)";
     });
 
-    btnBlue.addEventListener("click", function() {
+    btnBlue.addEventListener("click", function () {
       textoPintame.style.color = "blue";
       textoPintame.textContent = "2.Pinta-me! (Azul)";
     });
@@ -48,7 +46,7 @@ window.onload = function() {
   let contagem = 0;
 
   if (botaoConta && elementoNumero) {
-    botaoConta.addEventListener("click", function() {
+    botaoConta.addEventListener("click", function () {
       contagem++;
       elementoNumero.textContent = contagem;
 
@@ -66,13 +64,17 @@ window.onload = function() {
   const oFooter = document.querySelector("footer");
 
   if (botaoSubmeter && caixaSubmeter) {
-    botaoSubmeter.addEventListener("click", function() {
+    botaoSubmeter.addEventListener("click", function () {
       const corInserida = caixaSubmeter.value.trim();
       if (corInserida !== "") {
         document.body.style.backgroundColor = corInserida;
 
-        if (oHeader) oHeader.style.backgroundColor = "transparent";
-        if (oFooter) oFooter.style.backgroundColor = "transparent";
+        if (oHeader) {
+          oHeader.style.backgroundColor = "transparent";
+        }
+        if (oFooter) {
+          oFooter.style.backgroundColor = "transparent";
+        }
       }
     });
   }
@@ -80,7 +82,7 @@ window.onload = function() {
   const cabecalho = document.getElementById("cabecalho-site");
 
   if (cabecalho) {
-    cabecalho.addEventListener("mousemove", function(evento) {
+    cabecalho.addEventListener("mousemove", function (evento) {
       const x = evento.offsetX;
       const tomCor = x % 255;
       cabecalho.style.backgroundColor = `rgb(${tomCor}, 235, 235)`;
@@ -91,7 +93,7 @@ window.onload = function() {
   const caixaAleatoria = document.getElementById("caixa-aleatoria");
 
   if (caixaAleatoria) {
-    caixaAleatoria.addEventListener("input", function() {
+    caixaAleatoria.addEventListener("input", function () {
       const caracteresHex = "0123456789ABCDEF";
       let corGerada = "#";
       for (let i = 0; i < 6; i++) {
