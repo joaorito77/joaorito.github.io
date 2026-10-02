@@ -19,9 +19,7 @@ window.onload = function () {
     });
   }
 
-  const textoPintame = document.querySelector(
-    "ul li:nth-of-type(2) .texto-item"
-  );
+  const textoPintame = document.querySelector("ul li:nth-of-type(2) .texto-item");
   const btnRed = document.querySelector(".red");
   const btnGreen = document.querySelector(".green");
   const btnBlue = document.querySelector(".blue");
