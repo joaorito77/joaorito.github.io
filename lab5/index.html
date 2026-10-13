@@ -13,6 +13,7 @@
       #caixa {
         display: flex;
         flex-direction: row;
+        gap: 10px;
         background-color: gray;
         width: 300px;
         height: 200px;
@@ -24,7 +25,6 @@
         height: 30px;
         border-radius: 50%;
         background-color: tomato;
-        margin: 5px;
       }
     </style>
   </head>
@@ -42,9 +42,15 @@
           <li class="item-lista">
             <span class="texto-item" id="texto2">2.Pinta-me!!</span>
             <div class="grupo-botoes">
-              <button type="button" class="red" id="btn-red">Red</button>
-              <button type="button" class="green" id="btn-green">Green</button>
-              <button type="button" class="blue" id="btn-blue">Blue</button>
+              <button type="button" class="color" data-color="orange">
+                Orange
+              </button>
+              <button type="button" class="color" data-color="purple">
+                Purple
+              </button>
+              <button type="button" class="color" data-color="teal">
+                Teal
+              </button>
             </div>
           </li>
 
@@ -95,19 +101,21 @@
 
           <li class="item-lista ponto">
             <span class="texto-item">7.</span>
-            <input
-              type="text"
-              id="nome"
-              class="caixa-escrita"
-              placeholder="insira o seu nome"
-            />
-            <input
-              type="text"
-              id="idade"
-              class="caixa-escrita"
-              placeholder="insira a sua idade"
-            />
-            <button type="button" id="enviar">Enviar</button>
+            <form id="formulario">
+              <input
+                type="text"
+                id="nome"
+                class="caixa-escrita"
+                placeholder="insira o seu nome"
+              />
+              <input
+                type="text"
+                id="idade"
+                class="caixa-escrita"
+                placeholder="insira a sua idade"
+              />
+              <input type="submit" value="Enviar" />
+            </form>
             <p id="resultado"></p>
           </li>
 
@@ -133,6 +141,142 @@
     </main>
     <footer>DIW-2026</footer>
 
-    <script src="scripts/main.js"></script>
+    <script>
+      // Com o document.getElementById("id") vamos buscar os id`s do que queremos mexer previamente escolhidos
+      // no html.
+      //onclick, onchange etc é dizer quando o utilizador faz algo
+
+      // Passa o rato com over e out para trocar a frase e voltar à inicial //
+
+      //Guardamos os elementos nas variáveis para não repetir o getElementById
+      var linha1 = document.getElementById("linha1");
+      var texto1 = document.getElementById("texto1");
+
+      linha1.onmouseover = function () {
+        texto1.innerHTML = "Obrigado por passares aqui o rato!!"; //muda o texto
+        texto1.style.color = "green"; //muda a cor
+      };
+
+      linha1.onmouseout = function () {
+        texto1.innerHTML = "1.Passa por aqui!!";
+        texto1.style.color = ""; // tira a cor que a function tinha posto
+      };
+
+      // Ponto 2 de Pintar //
+
+      var texto2 = document.getElementById("texto2");
+
+      // querySelectorAll apanha todos os botões com class="color"
+      // forEach repete o código para cada um deles (com uma arrow function)
+      document.querySelectorAll("button.color").forEach((botao) => {
+        botao.onclick = function () {
+          var cor = botao.dataset.color; // lê o data-color guardado no botão
+          texto2.style.color = cor;
+          texto2.innerHTML = "2.Pinta-me!! Que cor tão bonita: " + cor;
+        };
+      });
+
+      // Mudar a cor da caixa //
+
+      var caixaTexto = document.getElementById("caixa-aleatoria");
+
+      // oninput significa a cada letra escrita
+      caixaTexto.oninput = function () {
+        var r = Math.floor(Math.random() * 256); // Math.random dá um numero entre 0 e 1;
+        var g = Math.floor(Math.random() * 256); // * 256 e Math.floor transforma-no num número inteiro
+        var b = Math.floor(Math.random() * 256); // entre 0 e 255
+        caixaTexto.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+      };
+
+      // Escolher a cor da lista //
+
+      var listaCores = document.getElementById("lista-cores");
+
+      listaCores.onchange = function () {
+        // onchange é quando o user escolhe outra opção
+        document.body.style.backgroundColor = this.value; //.value é o valor da opção escolhida
+      };
+
+      // Botão para contar //
+
+      var contagem = 0;
+
+      document.getElementById("conta").onclick = function () {
+        contagem = contagem + 1;
+        document.getElementById("numero").innerHTML = contagem;
+      };
+
+      // Direção das bolas //
+
+      var direcao = document.getElementById("direcao"); // lista (select)
+      var caixa = document.getElementById("caixa"); // caixa cinzenta
+
+      direcao.onchange = function () {
+        caixa.style.flexDirection = direcao.value; // direcao.value é o texto da opção escolhida
+      };
+
+      // Nome + Idade (formulário) //
+
+      document.getElementById("formulario").onsubmit = function (e) {
+        e.preventDefault(); // não deixa a página recarregar
+
+        var nome = document.getElementById("nome").value;
+        var idade = document.getElementById("idade").value;
+
+        document.getElementById("resultado").innerHTML =
+          "Olá, o " + nome + " tem " + idade + "!";
+      };
+
+      // Contador com -, + e RESET  //
+
+      //VARIÁVEIS
+      var textoValor = document.getElementById("valor");
+      var botaoMais = document.getElementById("mais");
+      var botaoMenos = document.getElementById("menos");
+      var botaoReset = document.getElementById("reset");
+
+      // Lê o valor guardado. Se não existir (primeira visita), começa em 0
+      var valor = Number(localStorage.getItem("contador")) || 0;
+      textoValor.innerHTML = valor; // mostra logo o valor guardado ao carregar
+
+      //EVENT HANDLERS (as funções que dizem o que fazer)
+      function atualizar() {
+        textoValor.innerHTML = valor;
+        localStorage.setItem("contador", valor); // guarda sempre que muda
+      }
+
+      function incrementar() {
+        valor = valor + 1;
+        atualizar();
+      }
+
+      function decrementar() {
+        valor = valor - 1;
+        atualizar();
+      }
+
+      function reiniciar() {
+        valor = 0;
+        atualizar();
+      }
+
+      //EVENT LISTENERS (ligam os botões às funções)
+      botaoMais.addEventListener("click", incrementar);
+      botaoMenos.addEventListener("click", decrementar);
+      botaoReset.addEventListener("click", reiniciar);
+
+      // Contador automático //
+      var segundos = 0;
+      var textoAuto = document.getElementById("auto");
+
+      //EVENT HANDLER (a função chamada a cada segundo)
+      function count() {
+        segundos = segundos + 1;
+        textoAuto.innerHTML = segundos;
+      }
+
+      //TIMER (liga a função ao relógio)
+      setInterval(count, 1000);
+    </script>
   </body>
 </html>
