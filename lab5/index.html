@@ -1,128 +1,138 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Laboratório 5</title>
 
-
-
     <style>
-        .item-lista {
-            margin-bottom: 30px;
-        }
+      .item-lista {
+        margin-bottom: 30px;
+      }
 
+      #caixa {
+        display: flex;
+        flex-direction: row;
+        background-color: gray;
+        width: 300px;
+        height: 200px;
+        margin-top: 10px;
+      }
 
-        #caixa {
-            display: flex;
-            flex-direction: row;
-            background-color: gray;
-            width: 300px;
-            height: 200px;
-            margin-top: 10px;
-        }
-
-        .bola {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            background-color: tomato;
-            margin: 5px;
-        }
+      .bola {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: tomato;
+        margin: 5px;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <header id="cabecalho-site">Laboratório 5</header>
 
     <main class="primeiro">
-        <section>
-            <ul>
-                <li class="item-lista" id="linha1">
-                    <span class="texto" id="texto1">1.Passa por aqui!!</span>
-                </li>
+      <section>
+        <ul>
+          <li class="item-lista" id="linha1">
+            <span class="texto" id="texto1">1.Passa por aqui!!</span>
+          </li>
 
-                <li class="item-lista">
-                    <span class="texto-item" id="texto2">2.Pinta-me!!</span>
-                    <div class="grupo-botoes">
-                        <button type="button" class="red" id="btn-red">Red</button>
-                        <button type="button" class="green" id="btn-green">Green</button>
-                        <button type="button" class="blue" id="btn-blue">Blue</button>
-                    </div>
-                </li>
+          <li class="item-lista">
+            <span class="texto-item" id="texto2">2.Pinta-me!!</span>
+            <div class="grupo-botoes">
+              <button type="button" class="red" id="btn-red">Red</button>
+              <button type="button" class="green" id="btn-green">Green</button>
+              <button type="button" class="blue" id="btn-blue">Blue</button>
+            </div>
+          </li>
 
-                <li class="item-lista">
-                    <label for="caixa-aleatoria" class="texto-item">3.Experimenta escrever...</label>
-                    <input type="text" id="caixa-aleatoria" class="caixa-escrita"
-                        placeholder="Escreve qualquer coisa..." />
-                </li>
+          <li class="item-lista">
+            <label for="caixa-aleatoria" class="texto-item"
+              >3.Experimenta escrever...</label
+            >
+            <input
+              type="text"
+              id="caixa-aleatoria"
+              class="caixa-escrita"
+              placeholder="Escreve qualquer coisa..."
+            />
+          </li>
 
-                <li class="item-lista">
-                    <label for="lista-cores" class="texto-item">4.Escolhe uma cor:</label>
-                    <select id="lista-cores">
-                        <option value="white">White</option>
-                        <option value="red">Red</option>
-                        <option value="blue">Blue</option>
-                    </select>
-                </li>
+          <li class="item-lista">
+            <label for="lista-cores" class="texto-item"
+              >4.Escolhe uma cor:</label
+            >
+            <select id="lista-cores">
+              <option value="white">White</option>
+              <option value="red">Red</option>
+              <option value="blue">Blue</option>
+            </select>
+          </li>
 
+          <li class="item-lista">
+            <span class="texto-item">5.</span>
+            <button type="button" id="conta" class="conta">Conta!</button>
+            <span id="numero" class="numero-exibido">0</span>
+          </li>
 
-                <li class="item-lista">
-                    <span class="texto-item">5.</span>
-                    <button type="button" id="conta" class="conta">Conta!</button>
-                    <span id="numero" class="numero-exibido">0</span>
-                </li>
+          <li class="item-lista">
+            <span class="texto-item">6.</span>
+            <select id="direcao">
+              <option value="row">row</option>
+              <option value="row-reverse">row-reverse</option>
+              <option value="column">column</option>
+              <option value="column-reverse">column-reverse</option>
+            </select>
+            <div id="caixa">
+              <div class="bola"></div>
+              <div class="bola"></div>
+              <div class="bola"></div>
+              <div class="bola"></div>
+            </div>
+          </li>
 
+          <li class="item-lista ponto">
+            <span class="texto-item">7.</span>
+            <input
+              type="text"
+              id="nome"
+              class="caixa-escrita"
+              placeholder="insira o seu nome"
+            />
+            <input
+              type="text"
+              id="idade"
+              class="caixa-escrita"
+              placeholder="insira a sua idade"
+            />
+            <button type="button" id="enviar">Enviar</button>
+            <p id="resultado"></p>
+          </li>
 
-                <li class="item-lista">
-                    <span class="texto-item">6.</span>
-                    <select id="direcao">
-                        <option value="row">row</option>
-                        <option value="row-reverse">row-reverse</option>
-                        <option value="column">column</option>
-                        <option value="column-reverse">column-reverse</option>
-                    </select>
-                    <div id="caixa">
-                        <div class="bola"></div>
-                        <div class="bola"></div>
-                        <div class="bola"></div>
-                        <div class="bola"></div>
-                    </div>
-                </li>
+          <li class="item-lista">
+            <span class="texto-item">8.</span>
+            <button type="button" id="menos">-</button>
+            <span id="valor">0</span>
+            <button type="button" id="mais">+</button>
+            <button type="button" id="reset">Reset</button>
+          </li>
 
-                <li class="item-lista ponto">
-                    <span class="texto-item">7.</span>
-                    <input type="text" id="nome" class="caixa-escrita" placeholder="insira o seu nome" />
-                    <input type="text" id="idade" class="caixa-escrita" placeholder="insira a sua idade" />
-                    <button type="button" id="enviar">Enviar</button>
-                    <p id="resultado"></p>
-                </li>
+          <li class="item-lista ponto">
+            <span class="texto-item"
+              >9.Contador Automático: <span id="auto">0</span></span
+            >
+          </li>
+        </ul>
+      </section>
 
-
-                <li class="item-lista">
-                    <span class="texto-item">8.</span>
-                    <button type="button" id="menos">-</button>
-                    <span id="valor">0</span>
-                    <button type="button" id="mais">+</button>
-                    <button type="button" id="reset">Reset</button>
-                </li>
-
-                <li class="item-lista ponto">
-                    <span class="texto-item">9.Contador Automático: <span id="auto">0</span></span>
-                </li>
-
-            </ul>
-        </section>
-
-        <div>
-            <img class="imagem" src="images/diw.svg" alt="Worldcloud" />
-        </div>
+      <div>
+        <img class="imagem" src="images/diw.svg" alt="Worldcloud" />
+      </div>
     </main>
     <footer>DIW-2026</footer>
 
     <script src="scripts/main.js"></script>
-</body>
-
+  </body>
 </html>
