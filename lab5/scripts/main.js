@@ -10,8 +10,8 @@ var texto1 = document.getElementById("texto1");
 
 linha1.onmouseover = function () {
     texto1.innerHTML = "Obrigado por passares aqui o rato!!"; //muda o texto
-        texto1.style.color = "green";                         //muda a cor
-    };
+    texto1.style.color = "green";                         //muda a cor
+};
 
 linha1.onmouseout = function () {
     texto1.innerHTML = "1.Passa por aqui!!";
@@ -68,7 +68,7 @@ var direcao = document.getElementById("direcao"); // lista (select)
 var caixa = document.getElementById("caixa"); // caixa cinzenta
 
 direcao.onchange = function () {
-  caixa.style.flexDirection = direcao.value; // direcao.value é o texto da opção escolhida
+    caixa.style.flexDirection = direcao.value; // direcao.value é o texto da opção escolhida
 };
 
 
@@ -78,7 +78,7 @@ document.getElementById("enviar").onclick = function () {
     var nome = document.getElementById("nome").value;
     var idade = document.getElementById("idade").value;
     document.getElementById("resultado").innerHTML =
-    "Olá " + nome + ", tens " + idade + " anos."; // junta os textos
+        "Olá " + nome + ", tens " + idade + " anos."; // junta os textos
 };
 
 
@@ -88,16 +88,16 @@ var valor = 0;
 var textoValor = document.getElementById("valor");
 
 document.getElementById("mais").onclick = function () {
-  valor = valor + 1;
-  textoValor.innerHTML = valor;
+    valor = valor + 1;
+    textoValor.innerHTML = valor;
 };
 document.getElementById("menos").onclick = function () {
-  valor = valor - 1;
-  textoValor.innerHTML = valor;
+    valor = valor - 1;
+    textoValor.innerHTML = valor;
 };
 document.getElementById("reset").onclick = function () {
-  valor = 0;
-  textoValor.innerHTML = valor;
+    valor = 0;
+    textoValor.innerHTML = valor;
 };
 
 
@@ -106,6 +106,6 @@ document.getElementById("reset").onclick = function () {
 var segundos = 0;
 
 setInterval(function () { // repete a função de x em x milissegundos
-  segundos = segundos + 1;
-  document.getElementById("auto").innerHTML = segundos;
+    segundos = segundos + 1;
+    document.getElementById("auto").innerHTML = segundos;
 }, 1000);
