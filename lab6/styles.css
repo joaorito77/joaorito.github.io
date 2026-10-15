@@ -1,0 +1,21 @@
+body {
+  background-color: white;
+}
+
+main {
+  background-color: azure;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+section {
+  border: 1px solid gray;
+  padding: 5px;
+  margin: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
