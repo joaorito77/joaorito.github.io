@@ -1,4 +1,3 @@
-
 // DECLARAÇÃO DE VARIÁVEIS
 
 const form = document.querySelector("form");
@@ -13,7 +12,6 @@ const nodeTotalRepetidos = document.querySelector("#totalRepetidos");
 // Recuperar dados do localStorage
 const colecao = JSON.parse(localStorage.getItem("colecao")) || [];
 const repetidos = JSON.parse(localStorage.getItem("repetidos")) || [];
-
 
 // EVENT HANDLERS
 
@@ -37,7 +35,6 @@ function guardaCarta() {
   guardaDados();
   nodeInputNumero.value = "";
 }
-
 
 // ATUALIZAR LISTAS
 
@@ -66,7 +63,6 @@ function atualizaLista(lista, nodeUl) {
   nodeTotalRepetidos.textContent = repetidos.length;
 }
 
-
 // GUARDAR DADOS
 
 function guardaDados() {
@@ -74,14 +70,12 @@ function guardaDados() {
   localStorage.setItem("repetidos", JSON.stringify(repetidos));
 }
 
-
 // EVENT LISTENERS
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   guardaCarta();
 });
-
 
 // INICIALIZAR LISTAS AO ABRIR A PÁGINA
 
