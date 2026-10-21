@@ -1,16 +1,16 @@
 body {
-  background-color: white;
+  background-color: rgb(248, 205, 149);
 }
 
 main {
-  background-color: azure;
+  background-color: rgb(248, 237, 213);
   margin: 10px;
   padding: 5px;
   border-radius: 5px;
 }
 
 section {
-  border: 1px solid gray;
+  border: 1px solid rgb(207, 23, 23);
   padding: 5px;
   margin: 10px;
 }
