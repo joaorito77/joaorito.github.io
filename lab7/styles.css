@@ -1,73 +1,87 @@
-* {
-    list-style: none;
-    box-sizing: border-box;
-
-}
 
 body {
-    padding: 10px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 2fr 7fr 1fr;
-    grid-template-areas:
-    'h h h'
-    'm m m'
-    'f f f';
-    margin: 10px;
-    background-color: white;
-    height: 100vh;
+  margin: 0;
+  font-family: sans-serif;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
 }
 
 header {
-    display: flex;
-    grid-area: h;
-    align-items: center;
-    padding: 6px;
-    background-color: peru;
-    border-radius: 10px;
-    color: white;
-    flex-direction: row;
-    justify-content: space-between;
-
-}
-a {
-    color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: peru;
+  color: white;
 }
 
+header h1 {
+  margin: 0;
+}
+
+header nav ul {
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+}
 
 main {
-    grid-area: m;
+  padding: 20px;
+  background-color: rgb(247, 247, 189);
 }
 
-main p {
-    padding: 10px;
-    display: flex;
-    background-color: bisque;
-    border-radius: 6px;
-    color: black;
-    justify-content: center;
+main section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
 
+main article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 250px;
+  padding: 15px;
+  background-color: beige;
+  border-radius: 5px;
+}
+
+main article img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+
+main article button {
+  padding: 8px;
+  cursor: pointer;
+}
+
+main #total {
+  font-weight: bold;
 }
 
 footer {
-    display: grid;
-    grid-area: f;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    background-color: peru;
-}
-article {
-    border-radius: 8px;
-    padding:10px;
-    background-color:blanchedalmond;
+  padding: 15px;
+  text-align: center;
+  background-color: burlywood;
 }
 
-.card1 {
-    background-color: blanchedalmond;
-    display:flex;
+@media (max-width: 600px) {
+  header {
     flex-direction: column;
-    border: 1px white;
+    gap: 10px;
+  }
 
+  main article {
+    width: 100%;
+  }
 }
-
