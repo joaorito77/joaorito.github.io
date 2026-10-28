@@ -34,7 +34,7 @@ header nav a {
 
 main {
   padding: 20px;
-  background-color: rgb(247, 247, 189);
+  background-color: rgb(247 247 189);
 }
 
 main section {
@@ -74,7 +74,7 @@ footer {
   background-color: burlywood;
 }
 
-@media (max-width: 600px) {
+@media (width <= 600px) {
   header {
     flex-direction: column;
     gap: 10px;
