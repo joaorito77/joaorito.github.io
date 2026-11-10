@@ -1,5 +1,3 @@
-/* exported produtos */
-
 // A. Estado e variáveis com referência de elementos do DOM
 const produtosSection = document.querySelector("#produtos");
 const cestoSection = document.querySelector("#cesto");
