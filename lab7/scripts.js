@@ -1,4 +1,4 @@
-/* global produtos */
+/* exported produtos */
 
 // A. Estado e variáveis com referência de elementos do DOM
 const produtosSection = document.querySelector("#produtos");
