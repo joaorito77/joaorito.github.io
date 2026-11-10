@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Minha Loja de Roupa</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Loja</h1>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#cesto">Cesto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Produtos</h2>
+      <section id="filtros">
+        <select id="filtro_categoria">
+          <option value="">Todas as categorias</option>
+        </select>
+
+        <select id="ordenar_preco">
+          <option value="">Ordernar por preço</option>
+          <option value="asc">Preço crescente</option>
+          <option value="desc">Preço decrescente</option>
+        </select>
+        <input type="text" id="pesquisa" placeholder="Pesquisar produto..." />
+      </section>
+      <section id="produtos"></section>
+
+      <h2>Cesto</h2>
+      <section id="cesto"></section>
+      <p id="total">Total: 0.00 €</p>
+
+      <section id="compra">
+        <label>
+          És estudante do DEISI?
+          <input type="checkbox" id="estudante" />
+        </label>
+        <label>
+          Cupão de Desconto:
+          <input type="text" id="cupao" />
+        </label>
+        <button id="comprar">Comprar</button>
+        <p id="resultado_compra"></p>
+      </section>
+    </main>
+
+    <footer>DIW 2026</footer>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
